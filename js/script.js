@@ -19,6 +19,7 @@ Stampare in console i tiri di dado e il risultato.
 /* 
 -creo array di mail
 -chiedo email all'utente
+-ciclo la variabile mails per quante sono le mail nell'array
 -creo condizione 
     -se la email è nella lista
         -stampo messaggio in console "sei autorizzato"
@@ -26,4 +27,8 @@ Stampare in console i tiri di dado e il risultato.
         -stampo messaggio in console "non sei registrato" 
 */
 
+
+//creo array di mail
+const mails = ["salvo@gmail.com", "marco@gmail.com", "paolo@gmail.com"];
+console.table(mails);
 
