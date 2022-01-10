@@ -30,7 +30,7 @@ Stampare in console i tiri di dado e il risultato.
 */
 
 
-
+/* 
 
 //creo variabile per agganciare elemento in pagina
 const resultElement = document.getElementById('welcome');
@@ -63,7 +63,7 @@ for(let i = 0; i < mails.length; i++){
 resultElement.innerText = message;
 
  
-
+ */
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -92,6 +92,16 @@ console.log(numberCpu);
 //creo variabile numero generato dall'utente da 1 a 6
 const numberUser = Math.floor(Math.random() * 6) + 1;
 console.log(numberUser);
+
+//creo la condizione per confrontare i due numeri
+//se il numeroCpu è maggiore del numeroUtente
+if(numberCpu > numberUser){
+    console.log(`${numberCpu} è maggiore di ${numberUser}`);
+}else if(numberCpu === numberUser){
+    console.log(`${numberCpu} e ${numberUser} sono uguali`);
+}else{
+    console.log(`${numberCpu} è minore di ${numberUser}`);
+}
 
 
 
