@@ -46,14 +46,12 @@ const userMail = prompt("digita la tua mail", "luca@gmail.com").trim();
 //creo variabile con messaggio di default 
 let message = "Non sei registrato";
 
-
 //-ciclo la variabile mails per quante sono le mail nell'array
 for(let i = 0; i < mails.length; i++){
     let currentElement = mails[i];
     console.log(currentElement);
 
     //creo condizione se la mail dell'utente è nella lista
-
     //se la mail è uguale alla mail della lista
     if(userMail === currentElement){
         //stampa in pagina "sei registrato"
@@ -61,6 +59,7 @@ for(let i = 0; i < mails.length; i++){
     }
 }
 
+//stampo testo all'interno della pagina
 resultElement.innerText = message;
 
 
@@ -85,6 +84,10 @@ Stampare in console i tiri di dado e il risultato.
         -altrimenti stampo in console "il numeroutente è maggiore del numeroCpu"
 */
 
+
+//creo variabile numero generato da cpu da 1 a 6
+const numberCpu = Math.floor(Math.random() * 6) + 1;
+console.log(numberCpu);
 
 
 
