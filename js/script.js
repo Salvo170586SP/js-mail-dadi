@@ -31,7 +31,6 @@ Stampare in console i tiri di dado e il risultato.
 
 
 
-
 //creo variabile per agganciare elemento in pagina
 const resultElement = document.getElementById('welcome');
 
@@ -63,7 +62,6 @@ for(let i = 0; i < mails.length; i++){
 resultElement.innerText = message;
 
  
- 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -88,35 +86,37 @@ Stampare in console i tiri di dado e il risultato.
 //creo variabile numero generato da cpu da 1 a 6
 const numberCpu = Math.floor(Math.random() * 6) + 1;
 console.log(numberCpu);
+document.getElementById('result-cpu').innerText = numberCpu;
+
 
 //creo variabile numero generato dall'utente da 1 a 6
 const numberUser = Math.floor(Math.random() * 6) + 1;
 console.log(numberUser);
+document.getElementById('result-user').innerText = numberUser;
 
 
 let result = "";
+
 
 //creo la condizione per confrontare i due numeri
 //se il numeroCpu è maggiore del numeroUtente
 if(numberCpu > numberUser){
     console.log(`${numberCpu} è maggiore di ${numberUser}`);
-    result += `${numberCpu} è maggiore di ${numberUser}`;
+    result += `HAI PERSO!!! `;
 
     //altrimenti se il numeroCpu è uguale a numeroUtente
 }else if(numberCpu === numberUser){
     //stampo che sono uguali
     console.log(`${numberCpu} e ${numberUser} sono uguali`);
-    result += `${numberCpu} e ${numberUser} sono uguali`;
+    result += `TU E IL PC AVETE PAREGGIATO`;
 
     //altrimenti il numeroCpu è minore a numeroUtente
 }else{
     //stampo "numeroCpu è minore di numeroUtente"
     console.log(`${numberCpu} è minore di ${numberUser}`);
-    result += `${numberCpu} è minore di ${numberUser}`;
+    result += `HAI VINTO!!!`;
+
 }
 
 //stampo a schermo il risultato
-document.getElementById('result').innerText = result;
-
-
-
+document.getElementById('final-result').innerText = result;
