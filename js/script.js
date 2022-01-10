@@ -32,3 +32,6 @@ Stampare in console i tiri di dado e il risultato.
 const mails = ["salvo@gmail.com", "marco@gmail.com", "paolo@gmail.com"];
 console.table(mails);
 
+//chiedo email all'utente
+const userMail = prompt("digita la tua mail").trim();
+console.log(userMail);
