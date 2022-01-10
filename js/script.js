@@ -35,24 +35,33 @@ Stampare in console i tiri di dado e il risultato.
 const resultElement = document.getElementById('welcome');
 
 //creo array di mail
-const mails = ["salvo@gmail.com","marco@gmail.com","luca@gmail.com"];
+const mails = ["salvo@gmail.com", "marco@gmail.com", "luca@gmail.com"];
 console.table(mails);
- 
+
 //chiedo email all'utente
-const userMail = prompt("digita la tua mail", "luca@gmail.com").trim();
+const userMail = prompt("digita la tua mail", "luca@gmail.com");
+
+//controllo
+//se l'array delle mail non include la mail dell'utente BLOCCA il programma e RITORNA al prompt
+if (!(mails.includes(userMail))) {
+    alert("non sei registrato");
+    window.location.reload();
+}
+
+
 
 
 //creo variabile con messaggio di default 
-let message = "Non sei registrato";
+let message = "non sei registrato";
 
 //-ciclo la variabile mails per quante sono le mail nell'array
-for(let i = 0; i < mails.length; i++){
+for (let i = 0; i < mails.length; i++) {
     let currentElement = mails[i];
     console.log(currentElement);
 
     //creo condizione se la mail dell'utente è nella lista
     //se la mail è uguale alla mail della lista
-    if(userMail === currentElement){
+    if (userMail === currentElement) {
         //stampa in pagina "sei registrato"
         message = `${userMail} sei registrato`;
     }
@@ -61,7 +70,7 @@ for(let i = 0; i < mails.length; i++){
 //stampo testo all'interno della pagina
 resultElement.innerText = message;
 
- 
+
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -95,23 +104,25 @@ console.log(numberUser);
 document.getElementById('result-user').innerText = numberUser;
 
 
-let result = "";
 
+
+//creo variabile d'appoggio result
+let result = "";
 
 //creo la condizione per confrontare i due numeri
 //se il numeroCpu è maggiore del numeroUtente
-if(numberCpu > numberUser){
+if (numberCpu > numberUser) {
     console.log(`${numberCpu} è maggiore di ${numberUser}`);
     result += `HAI PERSO!!! `;
 
     //altrimenti se il numeroCpu è uguale a numeroUtente
-}else if(numberCpu === numberUser){
+} else if (numberCpu === numberUser) {
     //stampo che sono uguali
     console.log(`${numberCpu} e ${numberUser} sono uguali`);
     result += `TU E IL PC AVETE PAREGGIATO`;
 
     //altrimenti il numeroCpu è minore a numeroUtente
-}else{
+} else {
     //stampo "numeroCpu è minore di numeroUtente"
     console.log(`${numberCpu} è minore di ${numberUser}`);
     result += `HAI VINTO!!!`;
