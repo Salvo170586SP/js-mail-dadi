@@ -40,31 +40,30 @@ const mails = ["salvo@gmail.com","marco@gmail.com","luca@gmail.com"];
 console.table(mails);
  
 //chiedo email all'utente
-const userMail = prompt("digita la tua mail", "paolo@gmail.com").trim();
+const userMail = prompt("digita la tua mail", "luca@gmail.com").trim();
+
+
+//creo variabile con messaggio di default 
+let message = "Non sei registrato";
 
 
 //-ciclo la variabile mails per quante sono le mail nell'array
 for(let i = 0; i < mails.length; i++){
-    const currentElement = mails[i];
+    let currentElement = mails[i];
     console.log(currentElement);
 
-
-
     //creo condizione se la mail dell'utente è nella lista
-    let message = ``;
 
     //se la mail è uguale alla mail della lista
-    if(userMail === mails[i]){
+    if(userMail === currentElement){
         //stampa in pagina "sei registrato"
-        message += `${userMail} sei registrato`;
-        resultElement.innerText = message;
-
-    }else{
-        //altrimenti stampa in pagina "non sei registrato"
-        message += `${userMail} non sei registrato`;
-        resultElement.innerText = message;
+        message = `${userMail} sei registrato`;
     }
 }
+
+resultElement.innerText = message;
+
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
