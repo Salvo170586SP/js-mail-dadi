@@ -66,4 +66,26 @@ for(let i = 0; i < mails.length; i++){
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+// # Gioco dei dadi
+/* Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+Stabilire il vincitore, in base a chi fa il punteggio più alto.
+Stampare in console i tiri di dado e il risultato.
+*/
+
+
+/*
+-creo variabile numero generato da cpu da 1 a 6
+-creo variabile numero generato dall'utente da 1 a 6
+-creo la condizione per confrontare i due numeri
+    -se il numeroCpu è maggiore del numeroUtente
+        -stampo in console "il numeroCpu è maggiore del numeroUtente"
+        -altrimenti se i numeri sono uguali stampo "il numeroCpu è uguale al numeroUtente"
+        -altrimenti stampo in console "il numeroutente è maggiore del numeroCpu"
+*/
+
+
+
 
