@@ -33,5 +33,13 @@ const mails = ["salvo@gmail.com", "marco@gmail.com", "paolo@gmail.com"];
 console.table(mails);
 
 //chiedo email all'utente
-const userMail = prompt("digita la tua mail").trim();
+const userMail = prompt("digita la tua mail", "salvo@gmail.com").trim();
 console.log(userMail);
+
+
+
+
+//-ciclo la variabile mails per quante sono le mail nell'array
+for(let i = 0; i < mails.length; i++){
+    console.log(mails[i]); 
+}
