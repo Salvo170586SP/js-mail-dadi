@@ -62,7 +62,7 @@ for(let i = 0; i < mails.length; i++){
 //stampo testo all'interno della pagina
 resultElement.innerText = message;
 
-
+ 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -88,6 +88,12 @@ Stampare in console i tiri di dado e il risultato.
 //creo variabile numero generato da cpu da 1 a 6
 const numberCpu = Math.floor(Math.random() * 6) + 1;
 console.log(numberCpu);
+
+//creo variabile numero generato dall'utente da 1 a 6
+const numberUser = Math.floor(Math.random() * 6) + 1;
+console.log(numberUser);
+
+
 
 
 
